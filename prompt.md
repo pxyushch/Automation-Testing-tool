@@ -76,7 +76,7 @@ Build a recording engine that captures:
 Store all actions in structured JSON format.
 
 Example:
-
+```
 {
   "type": "click",
   "selector": {
@@ -85,7 +85,7 @@ Example:
   },
   "timestamp": 1727181
 }
-
+```
 JAVASCRIPT POPUP HANDLING (CRITICAL)
 
 The tool MUST properly handle:
@@ -104,7 +104,7 @@ During code generation:
 Generate proper Playwright dialog handlers BEFORE triggering actions.
 
 Example:
-
+```
 page.on('dialog', async dialog => {
   if (dialog.type() === 'confirm') {
     await dialog.accept();
@@ -118,7 +118,7 @@ page.on('dialog', async dialog => {
     await dialog.accept('sample input');
   }
 });
-
+```
 SELECTOR STRATEGY (VERY IMPORTANT)
 
 Implement reliable selector generation.
@@ -155,7 +155,7 @@ Requirements:
 Generated code should look professional and human-written.
 
 Example style:
-
+```
 import { test, expect } from '@playwright/test';
 
 test('Login flow', async ({ page }) => {
@@ -168,7 +168,7 @@ test('Login flow', async ({ page }) => {
 
   await expect(page.getByText('Dashboard')).toBeVisible();
 });
-
+```
 PLAYBACK ENGINE
 
 Build playback functionality that:
@@ -360,7 +360,7 @@ Requirements:
 - Timestamped logs
 
 Example response:
-
+```
 {
   "success": false,
   "error": {
@@ -369,7 +369,7 @@ Example response:
     "timestamp": "2026-01-01T10:00:00Z"
   }
 }
-
+```
 Logging System:
 Implement structured logging using:
 - Winston
@@ -603,11 +603,12 @@ FOLDER STRUCTURE
 SETUP REQUIREMENTS
 
 Project should support:
+```
 npm install
 npm install --prefix backend
 npm install --prefix frontend
 npx --prefix backend playwright install chromium
-
+```
 Add package.json scripts for:
 - setup
 - dev
