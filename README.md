@@ -6,6 +6,7 @@ The prompt asks for a **production-grade AI-powered Record & Playback Automation
 
 ---
 ## Project Structure
+```
 /autotest-recorder-golden-main
 │
 ├── package.json
@@ -71,6 +72,7 @@ The prompt asks for a **production-grade AI-powered Record & Playback Automation
     ├── playbackRunner.js
     ├── actionExecutor.js
     └── retryHandler.js
+```
 
 ## Running 
 
