@@ -591,7 +591,7 @@ Generate:
 11. Folder structure
 
 FOLDER STRUCTURE
-
+```
 /recorder-tool
   /frontend
   /backend
@@ -599,7 +599,7 @@ FOLDER STRUCTURE
   /generator
   /playback
   /shared
-
+```
 SETUP REQUIREMENTS
 
 Project should support:
