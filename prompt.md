@@ -1,5 +1,5 @@
 # Prompt: AI-Powered Record & Playback Automation Tool
-
+## **Context and Role**
 Act as a senior full-stack engineer and UI/UX architect building a production grade AI powered Record & Playback Automation Tool.
 
 The goal is to create a modern web application that records browser interactions and automatically generates clean, executable Playwright test scripts.
@@ -12,7 +12,7 @@ The final product should be a real SaaS-quality automation platform:
 - Maintainable
 - Production-ready
 
-PROJECT OVERVIEW
+## **Objective**
 
 Build a Record & Playback Tool with:
 1. Browser interaction recording
@@ -23,7 +23,7 @@ Build a Record & Playback Tool with:
 6. Smart selector strategy
 7. Clean exportable test scripts
 
-TECH STACK
+**TECH STACK**
 
 Frontend:
 - React
@@ -41,7 +41,7 @@ Optional:
 - WebSocket for live logs
 - Monaco editor for code preview
 
-ARCHITECTURE PLANNING
+**ARCHITECTURE PLANNING**
 
 Before writing code:
 1. Define complete architecture
@@ -58,7 +58,7 @@ Before writing code:
 5. Define API routes
 6. Explain how popup handling and selector healing will work
 
-RECORDING ENGINE
+**RECORDING ENGINE**
 
 Build a recording engine that captures:
 - Clicks
@@ -119,7 +119,7 @@ page.on('dialog', async dialog => {
   }
 });
 ```
-SELECTOR STRATEGY (VERY IMPORTANT)
+**SELECTOR STRATEGY (VERY IMPORTANT)**
 
 Implement reliable selector generation.
 
@@ -137,7 +137,7 @@ Requirements:
 - Implement fallback selector healing
 - Retry failed selectors automatically
 
-PLAYWRIGHT CODE GENERATOR
+**PLAYWRIGHT CODE GENERATOR**
 
 Generate clean production-ready Playwright tests using:
 - @playwright/test
@@ -169,7 +169,7 @@ test('Login flow', async ({ page }) => {
   await expect(page.getByText('Dashboard')).toBeVisible();
 });
 ```
-PLAYBACK ENGINE
+**PLAYBACK ENGINE**
 
 Build playback functionality that:
 - Replays recorded actions
@@ -179,7 +179,7 @@ Build playback functionality that:
 - Supports retries
 - Shows success/failure states
 
-MODERN UI/UX
+**MODERN UI/UX**
 
 Build a trendy modern UI.
 
@@ -195,7 +195,7 @@ Primary colors:
 - Success: #22c55e
 - Error: #ef4444
 
-UI LAYOUT
+**UI LAYOUT**
 
 Top Navbar:
 - App logo/title: “AutoTest Recorder”
@@ -214,7 +214,7 @@ Main Workspace:
 4. Code preview panel
 5. Export/download button
 
-UI FEATURES
+**UI FEATURES**
 
 Requirements:
 - Fully responsive
@@ -228,7 +228,7 @@ Requirements:
 - Copy-to-clipboard
 - Download .spec.js button
 
-MICRO-INTERACTIONS
+**MICRO-INTERACTIONS**
 
 Add:
 - Pulsing recording indicator
@@ -237,7 +237,7 @@ Add:
 - Button loading animations
 - Smooth page transitions
 
-CODE QUALITY
+**CODE QUALITY**
 
 Requirements:
 - Modular architecture
@@ -249,7 +249,7 @@ Requirements:
 - Comments where necessary
 - Type-safe architecture if possible
 
-ADVANCED FEATURES
+**ADVANCED FEATURES**
 
 Support:
 - iFrames
@@ -260,7 +260,7 @@ Support:
 - Screenshot on failure
 - Session persistence
 
-ERROR HANDLING & INPUT VALIDATION (MANDATORY)
+**ERROR HANDLING & INPUT VALIDATION (MANDATORY)**
 
 The entire platform must implement enterprise-grade error handling, validation, resilience, and recovery mechanisms across frontend, backend, recorder engine, playback engine, and Playwright generation.
 
@@ -272,7 +272,7 @@ All errors must be:
 - Displayed clearly
 - Recoverable when possible
 
-FRONTEND VALIDATION
+**FRONTEND VALIDATION**
 
 Validate all user inputs before sending requests.
 
@@ -321,7 +321,7 @@ Examples:
 - “Recorder disconnected”
 - “Unable to generate Playwright script”
 
-BACKEND ERROR HANDLING
+**BACKEND ERROR HANDLING**
 
 All API routes must implement:
 
@@ -390,7 +390,7 @@ Support:
 - File logging
 - Error log separation
 
-RECORDER ENGINE ERROR HANDLING
+**RECORDER ENGINE ERROR HANDLING**
 
 The recorder engine must safely handle:
 - Detached DOM nodes
@@ -415,7 +415,7 @@ If recording fails:
 - Notify the user
 - Allow recovery/restart
 
-PLAYBACK ENGINE RESILIENCE
+**PLAYBACK ENGINE RESILIENCE**
 
 Playback engine must include:
 
@@ -455,7 +455,7 @@ Include:
 - Last successful action
 - DOM snapshot reference
 
-PLAYWRIGHT GENERATOR VALIDATION
+**PLAYWRIGHT GENERATOR VALIDATION**
 
 Generated scripts must be validated before export.
 
@@ -473,7 +473,7 @@ Generated code must:
 - Avoid redundant awaits
 - Avoid invalid Playwright APIs
 
-WEBSOCKET ERROR HANDLING
+**WEBSOCKET ERROR HANDLING**
 
 If WebSocket is used:
 
@@ -489,7 +489,7 @@ Handle:
 - Partial messages
 - Invalid payloads
 
-SECURITY VALIDATION
+**SECURITY VALIDATION**
 
 Implement:
 - Rate limiting
@@ -502,7 +502,7 @@ Implement:
 
 Never execute unsafe user-generated scripts.
 
-FILE EXPORT VALIDATION
+**FILE EXPORT VALIDATION**
 
 Before exporting:
 - Validate generated test integrity
@@ -514,7 +514,7 @@ Support:
 - Safe download handling
 - Export failure recovery
 
-PERFORMANCE SAFEGUARDS
+**PERFORMANCE SAFEGUARDS**
 
 Implement safeguards for:
 - Large recording sessions
@@ -529,7 +529,7 @@ Requirements:
 - Cleanup listeners
 - Session size limits
 
-TIMEOUT MANAGEMENT
+**TIMEOUT MANAGEMENT**
 
 Implement configurable timeout handling for:
 - Navigation
@@ -543,7 +543,7 @@ Requirements:
 - Timeout override settings
 - Timeout-specific error messages
 
-OBSERVABILITY & DEBUGGING
+**OBSERVABILITY & DEBUGGING**
 
 Implement:
 - Debug mode
@@ -557,7 +557,7 @@ Support:
 - Failure reproduction
 - Exportable debug logs
 
-FINAL QUALITY REQUIREMENTS
+**FINAL QUALITY REQUIREMENTS**
 
 The final system must behave like a production SaaS application with:
 - Graceful failures
@@ -575,7 +575,7 @@ The application must prioritize:
 5. User experience
 6. Automation accuracy
 
-OUTPUT REQUIREMENTS
+**OUTPUT REQUIREMENTS**
 
 Generate:
 1. Complete frontend code
@@ -590,7 +590,7 @@ Generate:
 10. Example generated test
 11. Folder structure
 
-FOLDER STRUCTURE
+**FOLDER STRUCTURE**
 ```
 /recorder-tool
   /frontend
@@ -600,7 +600,7 @@ FOLDER STRUCTURE
   /playback
   /shared
 ```
-SETUP REQUIREMENTS
+**SETUP REQUIREMENTS**
 
 Project should support:
 ```
@@ -615,7 +615,7 @@ Add package.json scripts for:
 - start
 - build
 
-IMPORTANT CONSTRAINTS
+**IMPORTANT CONSTRAINTS**
 
 DO NOT:
 - Use brittle selectors
@@ -633,6 +633,6 @@ ENSURE:
 - Production-ready structure
 - Real-world usability
 
-FINAL GOAL
+**FINAL GOAL**
 
 The final product should look and feel like a modern enterprise automation platform that could realistically compete with lightweight record-and-playback testing tools.
