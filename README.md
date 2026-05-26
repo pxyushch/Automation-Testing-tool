@@ -7,7 +7,7 @@ The prompt asks for a **production-grade AI-powered Record & Playback Automation
 ---
 ## Project Structure
 ```
-/autotest-recorder-golden-main
+/golden-response
 │
 ├── package.json
 ├── package-lock.json
@@ -90,12 +90,12 @@ python golden_response.py
 python golden_response.py --output-dir ./my-autotest-recorder
 ```
 
-This creates the full project under `./autotest-recorder-golden/`.
+This creates the full project under `./golden-response/`.
 
 ### Install and Start
 
 ```bash
-cd autotest-recorder-golden
+cd golden-response
 
 # Install all dependencies and Playwright browser
 npm run setup
