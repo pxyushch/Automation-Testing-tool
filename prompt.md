@@ -1,13 +1,5 @@
 # Prompt: AI-Powered Record & Playback Automation Tool
 
-**Domain:** DevOps / QA Automation / SaaS Engineering  
-**Author:** Piyush Chauhan  
-**Complexity Level:** Senior Full-Stack / Production-Grade
-
----
-
-## Task Description
-
 Act as a senior full-stack engineer and UI/UX architect building a **production-grade, AI-powered Record & Playback Automation Tool**.
 
 The goal is to create a modern web application that:
