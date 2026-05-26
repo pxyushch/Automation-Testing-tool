@@ -1,9 +1,30 @@
 ## Project Overview
 
-This repository contains all artifacts for a structured LLM evaluation exercise. A complex, domain-specific coding prompt was submitted to two large language models (ChatGPT / Response A and Gemini / Response B). Their outputs were analyzed across seven RLHF dimensions, and a golden reference implementation was produced.
+AutoTest Recorder is a modern AI-powered Record & Playback Automation Platform that records real browser interactions and automatically generates clean, executable Playwright test scripts.
 
-The prompt asks for a **production-grade AI-powered Record & Playback Automation Tool** — a full-stack SaaS application that records browser interactions and generates executable Playwright test scripts.
+The platform is designed as a production-grade SaaS application with a modern responsive UI, smart selector generation, popup handling, playback execution, live logs, and exportable automation scripts.
 
+It helps developers and QA teams create reliable browser automation without manually writing complex test code.
+
+Key capabilities include:
+
+* Browser interaction recording
+* Intelligent Playwright code generation
+* Playback execution engine
+* Smart selector healing
+* JavaScript dialog handling
+* Real-time logs and diagnostics
+* Screenshot capture on failure
+* Modern glassmorphism-based UI
+
+The system focuses on:
+
+* Reliability
+* Maintainability
+* Automation accuracy
+* Fault tolerance
+* Smooth user experience
+* Production-ready architecture
 ---
 ## Project Structure
 ```
