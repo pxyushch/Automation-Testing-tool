@@ -1,9 +1,9 @@
 """
 golden_response.py
 ==================
-AutoTest Recorder — Golden Benchmark Implementation
+AutoTest Recorder 
 
-This script is the ideal reference implementation for the AutoTest Recorder prompt.
+This script can be used for implementation of AutoTest Recorder prompt.
 It programmatically generates the complete project scaffold (all files, folders,
 and code) that represents a production-grade Record & Playback Automation Tool.
 
@@ -22,7 +22,6 @@ What it generates:
     - Playback engine with retry handler
     - README.md, package.json files
 
-Author: Piyush Chauhan (Golden Response Reference)
 """
 
 import argparse
@@ -64,74 +63,6 @@ A production-grade AI-powered Record & Playback Automation Tool.
 npm run setup   # Install all dependencies + Playwright browser
 npm run dev     # Start frontend (Vite) + backend (Express) concurrently
 ```
-
-## Features
-
-- ✅ Browser interaction recording (clicks, inputs, keyboard, dialogs)
-- ✅ Smart 6-tier selector strategy (data-testid → getByRole → aria-label → placeholder → CSS → XPath)
-- ✅ JavaScript popup handling (alert / confirm / prompt)
-- ✅ Clean Playwright test generation — no waitForTimeout, no noise
-- ✅ Playback engine with automatic retry and screenshot-on-failure
-- ✅ Dark glassmorphism UI with Monaco editor
-- ✅ WebSocket live logs
-- ✅ Export .spec.js download
-
-## Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React + Vite + Tailwind CSS + Framer Motion |
-| Backend | Node.js + Express |
-| Automation | Playwright |
-| Real-time | Socket.IO |
-| Editor | Monaco Editor |
-
-## Repository Structure
-
-```
-autotest-recorder-golden/
-├── package.json            # Root scripts (setup / dev / start / build)
-├── frontend/               # React application
-│   ├── src/
-│   │   ├── components/     # RecorderPanel, PlaybackPanel, GeneratedCode, UrlInput
-│   │   ├── pages/          # Dashboard
-│   │   ├── hooks/          # useRecorder, useSocket
-│   │   ├── services/       # api.js (axios client)
-│   │   └── store/          # recorderStore (Zustand)
-│   └── styles/globals.css
-├── backend/                # Express API server
-│   └── src/
-│       ├── routes/         # recorder, playback, generator
-│       ├── controllers/    # recorder, playback, generator
-│       ├── services/       # recorder, playback, generator
-│       └── utils/logger.js
-├── recorder/               # Playwright recording engine
-│   ├── browserRecorder.js  # Chromium launch & lifecycle
-│   ├── eventListeners.js   # DOM event injection & capture
-│   ├── selectorEngine.js   # 6-tier selector strategy
-│   └── dialogHandler.js    # alert/confirm/prompt capture
-├── generator/              # Playwright script generation
-│   ├── playwrightGenerator.js
-│   ├── assertionGenerator.js
-│   └── stepFormatter.js
-└── playback/               # Recorded session replay
-    ├── playbackRunner.js
-    ├── actionExecutor.js
-    └── retryHandler.js
-```
-
-## Evaluation Methodology
-
-Responses were evaluated across 7 RLHF dimensions:
-Correctness, Relevance, Completeness, Style & Presentation,
-Coherence, Helpfulness, and Creativity.
-
-The golden response was selected to address all gaps found in Response A (ChatGPT)
-and Response B (Gemini), and represents the ideal production benchmark.
-
-Live demo: https://autotest-recorder.onrender.com
-"""
-
 # ── Frontend ────────────────────────────────────────────────────────────────
 
 FILES["frontend/package.json"] = """\
@@ -1380,17 +1311,6 @@ recorder.service.js ──── Session management, persistence to disk
         │
         └──► playback.service.js  → actionExecutor.js + retryHandler.js
 ```
-
-## Key Design Decisions
-
-1. **Selector priority** enforced both in browser (eventListeners.js) and server (selectorEngine.js)
-2. **Dialog handlers** emitted before trigger actions in generated code — not after
-3. **No waitForTimeout** — Playwright's built-in auto-waiting used throughout
-4. **Session persistence** — events written to JSON on disk; playback works after browser close
-5. **Retry with exponential back-off** — 500ms, 1000ms, 1500ms before reporting failure
-6. **Screenshot on failure** — saved to `backend/screenshots/` for debugging
-"""
-
 
 # ---------------------------------------------------------------------------
 # Scaffold builder
